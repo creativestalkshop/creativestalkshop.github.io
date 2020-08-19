@@ -119,89 +119,139 @@ footer p {
   }
 }
 
-@import "compass/css3";
 
-@import url(https://fonts.googleapis.com/css?family=Merriweather);
-$red: #e74c3c;
+.contactBody{
+  background-color: ;
+  background-size: cover;
+  background-attachment: fixed;
+  height:700px;
 
-*, 
-*:before, 
-*:after {
-   @include box-sizing(border-box); 
+}
+.title{
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 42px;
+  color: rgb(252, 252, 252);
 }
 
-h1 {
-   text-align: center;
-   color: black;
-   @include text-shadow(1px 1px 0 rgba(white, 1));
+#title-Tag-Line{
+    font-size: 20px;
+}
+/* This will center the form */
+.wrapper {
+  width: 80%;
+  height: 50%;
+  margin: 0 auto 0 auto; 
 }
 
-form {
-   max-width: 600px;
-   text-align: center;
-   margin: 20px auto;
+/* form animation starts */
+.form {
+  background: #EBEBEB;
+  text-align: center; 
+  box-shadow: 0px 0px 20px 5px #AAA; 
+  border-radius: 10px;  
+  width: 45%; 
+  height: 400px;
+  margin: 30px auto 0 auto;
+  padding: 10px 10px;  
+  animation: bounce 1.5s infinite;
+}
+
+.name { 
+  background-color: #FF003E;
+  border-bottom: 5px solid #FF003E;
+  color: white;
+  width:300px;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+    font-size: 20px;
+}
+.name:hover{
+  background-color: #FF003E;
+  border-bottom: 5px solid #FF003E;
+  height:30px;
+  width:400px;
+}
+
+.email {
+  background-color: #FF003E;  
+  border-bottom: 5px solid #FF003E;
+  height:50px;
+  width:300px;
   
-  input, textarea {
-     border:0; outline:0;
-     padding: 1em;
-     @include border-radius(8px);
-     display: block;
-     width: 100%;
-     margin-top: 1em;
-     font-family: 'Merriweather', sans-serif;
-     @include box-shadow(0 1px 1px rgba(black, 0.1));
-     resize: none;
-    
-    &:focus {
-       @include box-shadow(0 0px 2px rgba($red, 1)!important);
-    }
-  }
-  
-  #input-submit {
-     color: white; 
-     background: $red;
-     cursor: pointer;
-    
-    &:hover {
-       @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6)); 
-    }
-  }
-  
-  textarea {
-      height: 126px;
-  }
+}
+.email:hover{
+  background-color: #FF003E;  
+  border-bottom: 5px solid #FF003E;
+  height:30px;
+  width:380px;
+ 
+}
+.message {   
+  background-color: #FF003E;
+  border-bottom: 5px solid #FF003E;
+  overflow: hidden;
+  height: 100px;  
+  width:300px;
+}
+
+.message:hover{
+  background-color: #FF003E;
+  border-bottom: 5px solid #FF003E;
+  height: 100px;
+  width:370px;
+}
+
+.submit{
+  border-radius:5px;
+  padding:10px;
+  background-color: #FF003E;  
+  border: none;
+  border-bottom: 5px solid #FF003E; 
+  transform: translateY(-120px); 
+
+}
+
+.submit:hover{
+  border-bottom: 5px solid ##FF003E;  
+  box-shadow: 15px 15px 15px 5px rgba(78, 72, 77, 0.219);
+}
+
+.entry{
+  display: block;
+  margin: 30px auto;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease 0s;
+  box-shadow: 0px 0px 25px 2px #AAA;  
+}
+
+/* Shadow to make it look like form is floating  */
+.shadow{
+  box-shadow: 0px 0px 60px 5px #AAA;
+  opacity: 0.5;
+  border-radius: 100px;
+  width: 50%; 
+  margin: 50px auto 0 auto;
+  padding: 0 20px;  
+  animation: shadow 1.5s infinite;
+}
+.submit{
+  border-radius:5px;
+  padding:10px;
+  width:150px;
+  color: white;
+  background-color: #FF003E;  
+  border: none;
+  border-bottom: 5px solid #FF003E; 
+  margin-top: 150px; 
+
 }
 
 
-.half {
-  float: left;
-  width: 48%;
-  margin-bottom: 1em;
-}
 
-.right { width: 50%; }
-
-.left {
-     margin-right: 2%; 
-}
-
-
-@media (max-width: 480px) {
-  .half {
-     width: 100%; 
-     float: none;
-     margin-bottom: 0; 
-  }
-}
-
-
-/* Clearfix */
-.cf:before,
-.cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
